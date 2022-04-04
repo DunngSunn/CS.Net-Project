@@ -10,7 +10,7 @@ namespace Manager
     public enum AudioGroupType
     {
         Music,
-        SFX
+        Sfx
     }
     
     // ------------------------------- //
@@ -90,7 +90,7 @@ namespace Manager
         }
 
         // Biến giá trị của âm thanh loại SFX
-        public static float SFXValue
+        public static float SfxValue
         {
             get => PlayerPrefs.GetFloat("SFXValue", 1f);
             set => PlayerPrefs.SetFloat("SFXValue", value);
@@ -108,11 +108,8 @@ namespace Manager
         {
             // Nghe các sự kiện giá trị của âm thanh loại Music và SFX được thay đổi
             SunEventManager.StartListening(EventID.MusicValueChanged, OnMusicValueChanged);
-            SunEventManager.StartListening(EventID.SFXValueChanged, OnSFXValueChanged);
-        }
-        
-        private void Start()
-        {
+            SunEventManager.StartListening(EventID.SfxValueChanged, OnSFXValueChanged);
+            
             // Khởi tạo tất cả âm thanh có trong game
             if (sounds.Count > 0)
             {
@@ -123,13 +120,22 @@ namespace Manager
                     sound.InitializeSource(go.AddComponent<AudioSource>());
                 }   
             }
+            
+            // Play background music
+            foreach (var sound in sounds)
+            {
+                if (sound.AudioGroup == AudioGroupType.Music)
+                {
+                    sound.Play();
+                }
+            }
         }
 
         private void OnDestroy()
         {
             // Kết thúc nghe các sự kiện giá trị của âm thanh loại Music và SFX được thay đổi
             SunEventManager.StopListening(EventID.MusicValueChanged, OnMusicValueChanged);
-            SunEventManager.StopListening(EventID.SFXValueChanged, OnSFXValueChanged);
+            SunEventManager.StopListening(EventID.SfxValueChanged, OnSFXValueChanged);
         }
 
         #endregion
@@ -145,7 +151,6 @@ namespace Manager
                 if (sound.ClipName == nameClip)
                 {
                     sound.Play();
-                    Debug.Log($"{sound.ClipName} play.");
                     return;
                 }
             }
@@ -160,15 +165,14 @@ namespace Manager
         private void OnSFXValueChanged()
         {
             // Lấy giá trị đã được thay đổi
-            var value = (float)SunEventManager.GetSender(EventID.SFXValueChanged);
+            var value = (float)SunEventManager.GetSender(EventID.SfxValueChanged);
             
             // Kiểm tra tất cả âm thanh đang có, nếu là loại SFX thì sẽ set lại volume 
             foreach (var sound in sounds)
             {
-                if (sound.AudioGroup == AudioGroupType.SFX)
+                if (sound.AudioGroup == AudioGroupType.Sfx)
                 {
                     sound.SetVolume(value);
-                    Debug.Log($"{sound.ClipName} volume changed.");
                 }
             }
         }
@@ -185,7 +189,6 @@ namespace Manager
                 if (sound.AudioGroup == AudioGroupType.Music)
                 {
                     sound.SetVolume(value);
-                    Debug.Log($"{sound.ClipName} volume changed.");
                 }
             }
         }

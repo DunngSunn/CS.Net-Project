@@ -10,11 +10,11 @@ namespace DunnGSunn
     public static class EventID
     {
         // Audio
-        public static string MusicValueChanged = "MusicValueChanged";
-        public static string SFXValueChanged = "SFXValueChanged";
+        public const string MusicValueChanged = "MusicValueChanged";
+        public const string SfxValueChanged = "SFXValueChanged";
         
-        // Pin
-        public static string PinValueChanged = "PinValueChanged";
+        // Gameplay
+        public const string ScoreInGameplay = "ScoreGameplayChanged";
     }
 
     public static class SunEventManager
