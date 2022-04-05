@@ -61,18 +61,18 @@
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
-     <Compile Include="Assets\Scripts\GameCore\Board\BoardBlock.cs" />
-     <Compile Include="Assets\Scripts\GameCore\Board\GameBoardGenerator.cs" />
      <Compile Include="Assets\Scripts\GameCore\Gameplay.cs" />
-     <Compile Include="Assets\Scripts\GameCore\Shape\Shape.cs" />
-     <Compile Include="Assets\Scripts\GameCore\Shape\ShapeData.cs" />
-     <Compile Include="Assets\Scripts\GameCore\Shape\ShapeGenerator.cs" />
-     <Compile Include="Assets\Scripts\Manager\AudioManager.cs" />
      <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
      <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
+     <Compile Include="Assets\Scripts\NgocAnh\GameCore\Board\BoardBlock.cs" />
+     <Compile Include="Assets\Scripts\NgocAnh\GameCore\Board\GameBoardGenerator.cs" />
+     <Compile Include="Assets\Scripts\NgocAnh\Manager\AudioManager.cs" />
      <Compile Include="Assets\Scripts\UI\BaseScreen.cs" />
      <Compile Include="Assets\Scripts\UI\GameplayScreen.cs" />
      <Compile Include="Assets\Scripts\UI\MainScreen.cs" />
+     <Compile Include="Assets\Scripts\VanThang\GameCore\Shape\Shape.cs" />
+     <Compile Include="Assets\Scripts\VanThang\GameCore\Shape\ShapeData.cs" />
+     <Compile Include="Assets\Scripts\VanThang\GameCore\Shape\ShapeGenerator.cs" />
      <Compile Include="Assets\SunScripts\HideIf\HideIfAttribute.cs" />
      <Compile Include="Assets\SunScripts\SunCanvas\SafeArea.cs" />
      <Compile Include="Assets\SunScripts\SunCanvas\SunToggle.cs" />
@@ -116,37 +116,37 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.31f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -332,13 +332,13 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.31f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.31f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

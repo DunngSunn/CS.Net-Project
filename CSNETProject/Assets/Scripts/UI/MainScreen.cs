@@ -1,5 +1,5 @@
 ﻿using DunnGSunn;
-using Manager;
+using NgocAnh;
 using UnityEngine.UI;
 
 namespace UI

@@ -52,48 +52,48 @@
   <ItemGroup>
      <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenPreviewManager.cs" />
-     <Compile Include="Assets\Scripts\GameCore\Editor\ShapeDataDrawer.cs" />
+     <Compile Include="Assets\Scripts\VanThang\GameCore\Editor\ShapeDataDrawer.cs" />
      <Compile Include="Assets\SunScripts\HideIf\Editor\HideIfAttributeDrawer.cs" />
      <Compile Include="Assets\SunScripts\HideIf\Editor\Utilities.cs" />
      <None Include="Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.31f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -291,37 +291,37 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.31f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DemiEditor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenProEditor">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Assets/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.collab-proxy@1.10.2/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/Github/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>F:/DS/CS.Net-Project/CSNETProject/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.31f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
