@@ -15,6 +15,9 @@ namespace DunnGSunn
         
         // Gameplay
         public const string ScoreInGameplay = "ScoreGameplayChanged";
+        
+        // End game
+        public const string ShowEndGame = "ShowEndGame";
     }
 
     public static class SunEventManager

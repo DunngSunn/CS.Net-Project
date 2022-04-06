@@ -27,7 +27,7 @@ namespace GameCore
         private bool _canPlace;
 
         // List block để check lúc di chuyển shape
-        private List<BoardBlock> _blockPlaces;
+        private List<BoardBlock> _blockPlaces = new List<BoardBlock>();
 
         #endregion
 
@@ -48,6 +48,9 @@ namespace GameCore
                     var pos = MainCam.ScreenToWorldPoint(eventData.position);
                     _currentShape.transform.DOScale(Vector3.one * .9f, .15f);
                     _currentShape.transform.DOMove(new Vector3(pos.x, pos.y + .5f, 0f), .15f);
+                    
+                    // Play audio
+                    AudioManager.Instance.PlaySound("BlockChoose");
                 }
             }
         }
@@ -89,14 +92,20 @@ namespace GameCore
                 {
                     // Set shape vào trong khung
                     SetPlacedShape();
+                    
+                    // Play audio
+                    AudioManager.Instance.PlaySound("BlockPlace");
 
                     // Check game board
-                    Invoke(nameof(CheckBoardStatus), .1f);
+                    StartCoroutine(nameof(CheckBoardStatus));
                 }
                 else
                 {
                     // Dừng hiển thị highlighting
                     StopHighlighting();
+                    
+                    // Play audio
+                    AudioManager.Instance.PlaySound("BlockWrong");
 
                     // Đưa shape về vị trí cũ
                     _currentShape.transform.DOLocalMove(Vector3.zero, .15f);
@@ -110,15 +119,10 @@ namespace GameCore
 
         #endregion
 
-        private void Start()
-        {
-            _blockPlaces = new List<BoardBlock>();
-        }
-
         #region Init gameplay
 
         // Chuẩn bị cho gameplay
-        public void InitializeGameplay()
+        public static void InitializeGameplay()
         {
             if (GameBoardGenerator.BlockGrid == null || GameBoardGenerator.BlockGrid.Count < 0)
             {
@@ -135,14 +139,15 @@ namespace GameCore
                 {
                     Destroy(shape.gameObject);
                 }
+                
+                ShapeGenerator.ShapeInGame.Clear();
             }
 
             ShapeGenerator.GenerateShape();
         }
 
         #endregion
-
-
+        
         #region Control
 
         // Check shape có thể đặt được không.
@@ -267,21 +272,31 @@ namespace GameCore
             // Tính tổng hàng và cột có thể phá
             var totalBreakingLines = breakingRows.Count + breakingColumns.Count;
 
-            if (totalBreakingLines == 1) {
-                // AudioManager.Instance.PlaySound (lineClear1);
-                // ScoreManager.Instance.AddScore (100 + (placingShapeBlockCount * 10));
-            } else if (totalBreakingLines == 2) {
-                // AudioManager.Instance.PlaySound (lineClear2);
-                // ScoreManager.Instance.AddScore (300+ (placingShapeBlockCount * 10));
-            } else if (totalBreakingLines == 3) {
-                // AudioManager.Instance.PlaySound (lineClear3);
-                // ScoreManager.Instance.AddScore (600+ (placingShapeBlockCount * 10));
-            } else if (totalBreakingLines >= 4) {
-                // AudioManager.Instance.PlaySound (lineClear4);
-                if (totalBreakingLines == 4) {
-                    // ScoreManager.Instance.AddScore (1000+ (placingShapeBlockCount * 10));
-                } else {
-                    // ScoreManager.Instance.AddScore ((300 * totalBreakingLines)+ (placingShapeBlockCount * 10));
+            switch (totalBreakingLines)
+            {
+                case 1:
+                    AudioManager.Instance.PlaySound ("Line1");
+                    SunEventManager.EmitEvent(EventID.ScoreInGameplay, sender: 100 + placingShapeBlockCount * 10);
+                    break;
+                case 2:
+                    AudioManager.Instance.PlaySound ("Line2");
+                    SunEventManager.EmitEvent(EventID.ScoreInGameplay, sender: 300 + placingShapeBlockCount * 10);
+                    break;
+                case 3:
+                    AudioManager.Instance.PlaySound ("Line3");
+                    SunEventManager.EmitEvent(EventID.ScoreInGameplay, sender: 600 + placingShapeBlockCount * 10);
+                    break;
+                default:
+                {
+                    if (totalBreakingLines >= 4) {
+                        AudioManager.Instance.PlaySound ("Line4");
+                        if (totalBreakingLines == 4) {
+                            SunEventManager.EmitEvent(EventID.ScoreInGameplay, sender: 1000 + placingShapeBlockCount * 10);
+                        } else {
+                            SunEventManager.EmitEvent(EventID.ScoreInGameplay, sender: 300 * totalBreakingLines + placingShapeBlockCount * 10);
+                        }
+                    }
+                    break;
                 }
             }
 
@@ -290,13 +305,8 @@ namespace GameCore
             {
                 foreach (var thisLine in breakingRows)
                 {
-                    StartCoroutine(BreakThisLine(thisLine));
+                    yield return StartCoroutine(BreakThisLine(thisLine));
                 }
-            }
-
-            if (breakingRows.Count > 0)
-            {
-                yield return new WaitForSeconds(0.1F);
             }
 
             // Phá cột
@@ -304,7 +314,7 @@ namespace GameCore
             {
                 foreach (var thisLine in breakingColumns)
                 {
-                    StartCoroutine(BreakThisLine(thisLine));
+                    yield return StartCoroutine(BreakThisLine(thisLine));
                 }
             }
 
@@ -312,8 +322,10 @@ namespace GameCore
             ShapeGenerator.FillShapeContainer();
         }
 
-        private void CheckBoardStatus()
+        private IEnumerator CheckBoardStatus()
         {
+            yield return new WaitForSeconds(.1f);
+            
             // Lấy số lượng ô được đặt
             var placingShapeBlockCount = _blockPlaces.Count;
             
@@ -365,18 +377,19 @@ namespace GameCore
             // Có hàng hoặc cột full thì phá tương ứng
             if (breakingRows.Count > 0 || breakingColumns.Count > 0)
             {
-                StartCoroutine(BreakAllCompletedLines(breakingRows, breakingColumns, placingShapeBlockCount));
+                yield return StartCoroutine(BreakAllCompletedLines(breakingRows, breakingColumns, placingShapeBlockCount));
             }
             else
             {
                 ShapeGenerator.FillShapeContainer();
-                // ScoreManager.Instance.AddScore (10 * placingShapeBlockCount);
+                SunEventManager.EmitEvent(EventID.ScoreInGameplay, sender: placingShapeBlockCount * 10);
             }
             
             // Kiểm tra còn đặt được nữa không
             if (!CanExistingBlocksPlaced(ShapeGenerator.ShapeInGame))
             {
                 Debug.Log("Game over");
+                SunEventManager.EmitEvent(EventID.ShowEndGame);
             }
         }
 
