@@ -3159,6 +3159,10 @@ MonoBehaviour:
   initOnAwake: 0
   tweenShow: {fileID: 1319792620}
   tweenHide: {fileID: 1319792620}
+  replayButton: {fileID: 706774172}
+  homeButton: {fileID: 656782495}
+  scoreText: {fileID: 1063555316}
+  bestScoreText: {fileID: 1804159759}
 --- !u!114 &1319792619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3482,7 +3486,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 999
+  m_text: 390
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3491,8 +3495,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4293454079
-  m_fontColor: {r: 1, g: 0.9103774, b: 0.9103774, a: 1}
+    rgba: 4279564287
+  m_fontColor: {r: 1, g: 0.9686275, b: 0.078431375, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
